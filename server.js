@@ -64,7 +64,7 @@ app.get('/events/:eventid', async (req, res) => {
     try {
         const event = await Event.findOne({ eventid });
         if (!event) {
-            return res.status(404).send({ message: 'Event not found' });
+            return res.status(404).send({ message: 'Event not aviable.' });
         }
         res.status(200).send(event);
     } catch (error) {

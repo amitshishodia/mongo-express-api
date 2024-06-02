@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: express-mongo-api
-        image: gcr.io/peerless-list-423401-k1/express-mongo-api:v2
+        image: gcr.io/peerless-list-423401-k1/express-mongo-api:v3
         ports:
         - containerPort: 3000
         env:
