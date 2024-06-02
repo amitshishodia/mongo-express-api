@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 
 // Middleware
+app.use(express.static('public'));
 app.use(bodyParser.json());
 
 // MongoDB connection
@@ -51,6 +52,7 @@ app.post('/events', async (req, res) => {
 app.get('/events', async (req, res) => {
     try {
         const events = await Event.find();
+        //result
         res.status(200).send(events);
     } catch (error) {
         res.status(500).send(error);
